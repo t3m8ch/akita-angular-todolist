@@ -4,11 +4,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { RoutingModule } from './routing/routing.module';
+import { RouterModule } from '@angular/router';
+import { routes } from './routing/routes';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, TuiRootModule, TuiDialogModule, TuiAlertModule, RoutingModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    TuiRootModule,
+    TuiDialogModule,
+    TuiAlertModule,
+    RouterModule.forRoot(routes),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
