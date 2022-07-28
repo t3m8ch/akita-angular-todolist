@@ -7,7 +7,7 @@ import { TodosStore } from './state/todos.store';
 import { TuiButtonModule, TuiGroupModule } from '@taiga-ui/core';
 import { TuiCheckboxBlockModule, TuiInputModule, TuiIslandModule } from '@taiga-ui/kit';
 import { TodoItemComponent } from './todo-item/todo-item.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddTodoFormComponent } from './add-todo-form/add-todo-form.component';
 
 @NgModule({
@@ -20,6 +20,7 @@ import { AddTodoFormComponent } from './add-todo-form/add-todo-form.component';
     TuiInputModule,
     TuiGroupModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [TodosStore, TodosQuery, TodosService],
 })

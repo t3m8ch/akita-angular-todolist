@@ -1,5 +1,11 @@
-<tui-checkbox-block contentAlign='left' size='l' style='display: block;' [formControl]='isCompletedControl'>
-  <div style='display: flex; justify-content: space-between;'>
+<tui-checkbox-block
+  (click)='onToggleCompleted($event)'
+  [ngModel]='todo.isCompleted'
+  contentAlign='left'
+  size='l'
+  style='display: block'
+>
+  <div style='display: flex; justify-content: space-between'>
     <span>{{ todo.text }}</span>
     <button tuiIconButton size='xs' appearance='flat' icon='tuiIconTrash' (click)='onDeleteButtonClick()'></button>
   </div>
