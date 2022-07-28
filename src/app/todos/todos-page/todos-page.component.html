@@ -1,1 +1,12 @@
-<p>todos-page works!</p>
+<div class='tui-container'>
+  <h1 class='tui-text_h1'>ToDos</h1>
+  <app-add-todo-form (addTodo)='onAddTodo($event)'></app-add-todo-form>
+  <app-todos-item
+    [todo]='todo'
+    style='display: block'
+    class='tui-space_top-2'
+    *ngFor='let todo of todos$ | async'
+    (delete)='onDeleteTodo($event)'
+    (isCompletedChange)='onTodoIsCompletedChange($event)'
+  ></app-todos-item>
+</div>

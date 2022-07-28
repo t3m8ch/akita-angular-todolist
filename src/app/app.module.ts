@@ -9,6 +9,7 @@ import { routes } from './routing/routes';
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
 import { environment } from '../environments/environment';
+import { TodosModule } from './todos/todos.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { environment } from '../environments/environment';
     TuiRootModule,
     TuiDialogModule,
     TuiAlertModule,
+    TodosModule,
     RouterModule.forRoot(routes),
     environment.production ? [] : AkitaNgDevtools.forRoot(),
     AkitaNgRouterStoreModule,
