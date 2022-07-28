@@ -30,4 +30,8 @@ export class TodosPageComponent implements OnInit {
   onAddTodo({ text }: AddTodoEvent) {
     this.todosService.add(text);
   }
+
+  trackTodo(index: number, todo: Todo) {
+    return todo.id;
+  }
 }
