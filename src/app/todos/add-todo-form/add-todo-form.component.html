@@ -1,0 +1,11 @@
+<form tuiGroup [formGroup]='addTodoFormGroup'>
+  <tui-input formControlName='text'>Text of new ToDo</tui-input>
+  <button
+    tuiButton
+    class='tui-group__auto-width-item'
+    [disabled]='!addTodoFormGroup.valid'
+    (click)='onAddButtonClick()'
+  >
+    Add
+  </button>
+</form>
